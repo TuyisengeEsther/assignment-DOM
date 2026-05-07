@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Explore Rwanda</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,60 +15,48 @@
   </script>
 </head>
 
-<body class="bg-white text-black dark:bg-gray-900 dark:text-white">
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white scroll-smooth transition duration-300">
 
-  
+  <!-- NAVBAR -->
 
   <header class="bg-slate-900 text-white sticky top-0 z-50">
 
     <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto relative">
 
-      
       <h1 class="text-2xl font-bold">
         Explore Rwanda
       </h1>
 
-    
-
-      <ul id="navLinks"
-          class="hidden md:flex gap-6 items-center font-medium">
+      <ul id="navLinks" class="hidden md:flex gap-6 items-center font-medium">
 
         <li>
-          <a href="#home"
-             class="nav-link bg-blue-600 px-3 py-2 rounded-lg">
+          <a href="#home" class="nav-link active bg-blue-600 px-3 py-2 rounded-lg">
             Home
           </a>
         </li>
 
-        
-
         <li class="relative">
 
-          <button id="dropdownBtn"
-                  class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
+          <button id="dropdownBtn" class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
             Discover ▾
           </button>
 
-          <ul id="dropdownMenu"
-              class="hidden absolute top-12 left-0 bg-white text-black dark:bg-gray-800 dark:text-white w-44 rounded-xl shadow-lg overflow-hidden">
+          <ul id="dropdownMenu" class="hidden absolute top-12 left-0 bg-white text-black dark:bg-gray-800 dark:text-white w-44 rounded-xl shadow-lg overflow-hidden">
 
             <li>
-              <a href="#activities"
-                 class="block px-4 py-3 hover:bg-gray-200 dark:hover:bg-gray-700">
+              <a href="#activities" class="block px-4 py-3 hover:bg-gray-200 dark:hover:bg-gray-700">
                 Activities
               </a>
             </li>
 
             <li>
-              <a href="#planner"
-                 class="block px-4 py-3 hover:bg-gray-200 dark:hover:bg-gray-700">
+              <a href="#planner" class="block px-4 py-3 hover:bg-gray-200 dark:hover:bg-gray-700">
                 Planner
               </a>
             </li>
 
             <li>
-              <a href="#gallery"
-                 class="block px-4 py-3 hover:bg-gray-200 dark:hover:bg-gray-700">
+              <a href="#gallery" class="block px-4 py-3 hover:bg-gray-200 dark:hover:bg-gray-700">
                 Gallery
               </a>
             </li>
@@ -78,43 +66,32 @@
         </li>
 
         <li>
-          <a href="#activities"
-             class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
+          <a href="#activities" class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
             Activities
           </a>
         </li>
 
         <li>
-          <a href="#planner"
-             class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
+          <a href="#planner" class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
             Planner
           </a>
         </li>
 
         <li>
-          <a href="#contact"
-             class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
+          <a href="#contact" class="nav-link px-3 py-2 rounded-lg hover:bg-blue-600">
             Contact
           </a>
         </li>
 
       </ul>
 
-     
-
       <div class="flex items-center gap-4">
 
-        
-
-        <button id="themeBtn"
-                class="bg-blue-600 w-11 h-11 rounded-full text-lg hover:bg-blue-800 transition">
+        <button id="themeBtn" class="bg-blue-600 w-11 h-11 rounded-full text-lg hover:bg-blue-800 transition">
           🌙
         </button>
 
-       
-
-        <button id="hamburger"
-                class="md:hidden text-3xl">
+        <button id="hamburger" class="md:hidden text-3xl">
           ☰
         </button>
 
@@ -122,18 +99,17 @@
 
     </nav>
 
-   
+    <!-- MOBILE MENU -->
 
-    <div id="mobileMenu"
-         class="hidden md:hidden bg-slate-900 px-6 pb-6">
+    <div id="mobileMenu" class="hidden md:hidden bg-slate-900 px-6 pb-6">
 
       <div class="flex flex-col gap-4">
 
-        <a href="#home">Home</a>
-        <a href="#activities">Activities</a>
-        <a href="#planner">Planner</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#activities" class="mobile-link">Activities</a>
+        <a href="#planner" class="mobile-link">Planner</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#contact" class="mobile-link">Contact</a>
 
       </div>
 
@@ -141,206 +117,572 @@
 
   </header>
 
+  <!-- HERO -->
 
+  <section
+    id="home"
+    class="min-h-screen bg-cover bg-center flex items-center justify-center text-center"
+    style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop')"
+  >
 
-<section
-  id="home"
-  class="min-h-screen bg-cover bg-center flex items-center justify-center text-center"
-  style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop')"
->
+    <div class="bg-black/60 w-full min-h-screen flex flex-col justify-center items-center px-6 text-white">
 
-  <div class="bg-black/60 w-full min-h-screen flex flex-col justify-center items-center px-6 text-white">
+      <h1 class="text-5xl md:text-7xl font-bold max-w-4xl">
+        Discover Amazing Experiences in Rwanda
+      </h1>
 
-    <h1 class="text-5xl md:text-7xl font-bold max-w-4xl">
-      Discover Amazing Experiences in Rwanda
-    </h1>
+      <p id="heroText" class="mt-6 text-lg md:text-2xl max-w-3xl">
+        Plan adventures, select activities, and build your dream experience using JavaScript DOM manipulation.
+      </p>
 
-    <p id="heroText" class="mt-6 text-lg md:text-2xl max-w-3xl">
-      Plan adventures, explore destinations, and experience Rwanda using our website.
-    </p>
-
-   
-
-    <div class="mt-8 flex flex-col md:flex-row gap-4">
-
-      <input
-        type="text"
-        id="destinationInput"
-        placeholder="Enter your dream destination"
-        class="p-4 rounded-xl text-black w-72"
-      >
-
-      <button
-        id="planBtn"
-        class="bg-blue-600 hover:bg-blue-800 px-6 py-4 rounded-xl transition"
-      >
-        Plan Trip
+      <button id="changeTextBtn" class="mt-8 bg-blue-600 hover:bg-blue-800 px-6 py-3 rounded-xl transition">
+        Change Welcome Message
       </button>
 
     </div>
 
-   
+  </section>
 
-    <h3
-      id="outputText"
-      class="mt-6 text-2xl font-semibold text-blue-300"
-    ></h3>
+  <!-- WELCOME -->
 
-    
+  <section class="py-20 px-6">
 
-    <button
-      id="changeTextBtn"
-      class="mt-8 bg-white text-black hover:bg-gray-300 px-6 py-3 rounded-xl transition"
-    >
-      Change Welcome Message
-    </button>
+    <div class="max-w-5xl mx-auto text-center">
 
-  </div>
+      <h2 class="text-4xl font-bold mb-8">
+        Personal Welcome
+      </h2>
 
-</section>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Enter your name"
+          class="border border-gray-300 p-4 rounded-xl text-black w-full"
+        >
+
+        <button id="displayBtn" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-4 rounded-xl transition">
+          Display Welcome
+        </button>
+
+      </div>
+
+      <h3 id="displayText" class="mt-6 text-blue-600 dark:text-blue-400 text-xl font-semibold"></h3>
+
+    </div>
+
+  </section>
+
+  <!-- ACTIVITIES -->
+
+  <section id="activities" class="py-20 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <h2 class="text-4xl font-bold">
+          Popular Activities
+        </h2>
+
+        <p class="mt-4 text-lg">
+          Choose activities and add them to your planner.
+        </p>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <!-- CARD 1 -->
+
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-56 object-cover"
+            alt="Mountain"
+          >
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Mountain Hiking
+            </h3>
+
+            <p class="mb-6">
+              Explore beautiful hills and hiking trails with breathtaking views.
+            </p>
+
+            <button class="card-btn bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded-xl text-white transition">
+              Add Activity
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-56 object-cover"
+            alt="Food"
+          >
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Local Food Tour
+            </h3>
+
+            <p class="mb-6">
+              Taste traditional meals and enjoy local restaurants and cafes.
+            </p>
+
+            <button class="card-btn bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded-xl text-white transition">
+              Add Activity
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-56 object-cover"
+            alt="Lake"
+          >
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Lake Adventure
+            </h3>
+
+            <p class="mb-6">
+              Enjoy relaxing boat rides and outdoor water adventures.
+            </p>
+
+            <button class="card-btn bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded-xl text-white transition">
+              Add Activity
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+
+          <img
+            src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop"
+            class="w-full h-56 object-cover"
+            alt="Cinema"
+          >
+
+          <div class="p-6">
+
+            <h3 class="text-2xl font-bold mb-3">
+              Movie Night
+            </h3>
+
+            <p class="mb-6">
+              Relax with friends and enjoy exciting entertainment experiences.
+            </p>
+
+            <button class="card-btn bg-blue-600 hover:bg-blue-800 px-4 py-2 rounded-xl text-white transition">
+              Add Activity
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PLANNER -->
+
+  <section id="planner" class="py-20 px-6">
+
+    <div class="max-w-5xl mx-auto bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8">
+
+      <div class="text-center mb-10">
+
+        <h2 class="text-4xl font-bold">
+          Activity Planner
+        </h2>
+
+        <p class="mt-4 text-lg">
+          Add custom activities and manage your list dynamically.
+        </p>
+
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-4">
+
+        <input
+          type="text"
+          id="itemInput"
+          placeholder="Add custom activity"
+          class="border border-gray-300 p-4 rounded-xl text-black w-full"
+        >
+
+        <button id="addBtn" class="bg-blue-600 hover:bg-blue-800 text-white px-6 py-4 rounded-xl transition">
+          Add Activity
+        </button>
+
+      </div>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search activities"
+        class="mt-6 border border-gray-300 p-4 rounded-xl text-black w-full"
+      >
+
+      <ul id="activityList" class="mt-8 space-y-4"></ul>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section id="gallery" class="py-20 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-14">
+
+        <h2 class="text-4xl font-bold">
+          Experience Gallery
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <img
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-3xl h-80 w-full object-cover"
+          alt="Nature"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-3xl h-80 w-full object-cover"
+          alt="Travel"
+        >
+
+        <img
+          src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1200&auto=format&fit=crop"
+          class="rounded-3xl h-80 w-full object-cover"
+          alt="Adventure"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="py-20 px-6">
+
+    <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-10">
+
+      <div class="text-center mb-10">
+
+        <h2 class="text-4xl font-bold">
+          Contact Us
+        </h2>
+
+        <p class="mt-4">
+          Send your travel message.
+        </p>
+
+      </div>
+
+      <form class="space-y-6">
+
+        <input
+          type="text"
+          placeholder="Your Name"
+          class="w-full border border-gray-300 p-4 rounded-xl text-black"
+        >
+
+        <input
+          type="email"
+          placeholder="Your Email"
+          class="w-full border border-gray-300 p-4 rounded-xl text-black"
+        >
+
+        <textarea
+          placeholder="Your Message"
+          rows="5"
+          class="w-full border border-gray-300 p-4 rounded-xl text-black"
+        ></textarea>
+
+        <button class="bg-blue-600 hover:bg-blue-800 text-white px-8 py-4 rounded-xl transition w-full">
+          Send Message
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="bg-slate-900 text-white text-center py-12 px-6">
+
+    <h2 class="text-3xl font-bold">
+      Explore Rwanda
+    </h2>
+
+    <p class="mt-4">
+      Dynamic DOM Manipulation Project
+    </p>
+
+    <p class="mt-2">
+      Student: Esther Tuyisenge | Course: JavaScript DOM Assignment
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
 
   <script>
 
-    
+    /* ACTIVE NAVIGATION */
 
-    const navLinks =
-    document.querySelectorAll(".nav-link");
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    navLinks.forEach(function(link) {
+    navLinks.forEach(link => {
 
-      link.addEventListener("click", function() {
+      link.addEventListener('click', () => {
 
-        navLinks.forEach(function(item) {
-
-          item.classList.remove("bg-blue-600");
-
+        navLinks.forEach(item => {
+          item.classList.remove('bg-blue-600');
         });
 
-        link.classList.add("bg-blue-600");
+        link.classList.add('bg-blue-600');
 
       });
 
     });
 
-   
+    /* DROPDOWN */
 
-    const dropdownBtn =
-    document.getElementById("dropdownBtn");
+    const dropdownBtn = document.getElementById('dropdownBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
-    const dropdownMenu =
-    document.getElementById("dropdownMenu");
-
-    dropdownBtn.addEventListener("click", function(e) {
+    dropdownBtn.addEventListener('click', (e) => {
 
       e.preventDefault();
 
-      dropdownMenu.classList.toggle("hidden");
+      dropdownMenu.classList.toggle('hidden');
 
     });
 
-    
+    document.addEventListener('click', (e) => {
 
-    document.addEventListener("click", function(e) {
-
-      if (
+      if(
         !dropdownBtn.contains(e.target) &&
         !dropdownMenu.contains(e.target)
-      ) {
+      ){
 
-        dropdownMenu.classList.add("hidden");
+        dropdownMenu.classList.add('hidden');
 
       }
 
     });
 
-  
+    /* HAMBURGER MENU */
 
-    const hamburger =
-    document.getElementById("hamburger");
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-    const mobileMenu =
-    document.getElementById("mobileMenu");
+    hamburger.addEventListener('click', () => {
 
-    hamburger.addEventListener("click", function() {
-
-      mobileMenu.classList.toggle("hidden");
+      mobileMenu.classList.toggle('hidden');
 
     });
 
-    
+    /* TEXT MANIPULATION */
 
-    const themeBtn =
-    document.getElementById("themeBtn");
+    const changeTextBtn = document.getElementById('changeTextBtn');
+    const heroText = document.getElementById('heroText');
 
-    themeBtn.addEventListener("click", function() {
+    changeTextBtn.addEventListener('click', () => {
 
-      document.documentElement.classList.toggle("dark");
+      heroText.textContent =
+      'JavaScript successfully changed this paragraph using DOM manipulation!';
 
-      if (
-        document.documentElement.classList.contains("dark")
-      ) {
+    });
 
-        themeBtn.textContent = "☀️";
+    /* DARK MODE */
+
+    const themeBtn = document.getElementById('themeBtn');
+
+    themeBtn.addEventListener('click', () => {
+
+      document.documentElement.classList.toggle('dark');
+
+      if(document.documentElement.classList.contains('dark')){
+
+        themeBtn.textContent = '☀️';
 
       } else {
 
-        themeBtn.textContent = "🌙";
+        themeBtn.textContent = '🌙';
 
       }
 
     });
 
-    
+    /* INPUT DISPLAY */
 
+    const displayBtn = document.getElementById('displayBtn');
+    const nameInput = document.getElementById('nameInput');
+    const displayText = document.getElementById('displayText');
 
-  
+    displayBtn.addEventListener('click', () => {
 
-  const changeTextBtn =
-  document.getElementById("changeTextBtn");
+      const userName = nameInput.value.trim();
 
-  const heroText =
-  document.getElementById("heroText");
+      if(userName === ''){
 
-  changeTextBtn.addEventListener("click", function() {
+        displayText.textContent = 'Please enter your name.';
 
-    heroText.textContent =
-    "change this by using other name of advanture that u want to explore more.";
+      } else {
 
-  });
+        displayText.textContent =
+        `Welcome ${userName}! Start planning your next adventure.`;
 
+      }
 
+    });
 
-  const planBtn =
-  document.getElementById("planBtn");
+    /* DYNAMIC LIST */
 
-  const destinationInput =
-  document.getElementById("destinationInput");
+    const addBtn = document.getElementById('addBtn');
+    const itemInput = document.getElementById('itemInput');
+    const activityList = document.getElementById('activityList');
 
-  const outputText =
-  document.getElementById("outputText");
+    function createListItem(activityName){
 
-  planBtn.addEventListener("click", function() {
+      const li = document.createElement('li');
 
-    const value =
-    destinationInput.value.trim();
+      li.textContent = activityName;
 
-    if(value === "") {
+      li.classList.add(
+        'bg-gray-200',
+        'dark:bg-gray-700',
+        'p-4',
+        'rounded-xl',
+        'cursor-pointer',
+        'hover:translate-x-2',
+        'transition'
+      );
 
-      outputText.textContent =
-      "Please enter a destination.";
+      li.addEventListener('click', () => {
 
-    } else {
+        alert(activityName + ' removed');
 
-      outputText.textContent =
-      "Your next adventure destination is " + value;
+        li.remove();
+
+      });
+
+      activityList.appendChild(li);
 
     }
 
-  });
+    addBtn.addEventListener('click', () => {
 
+      const activity = itemInput.value.trim();
 
+      if(activity !== ''){
+
+        createListItem(activity);
+
+        itemInput.value = '';
+
+      }
+
+    });
+
+    itemInput.addEventListener('keypress', (e) => {
+
+      if(e.key === 'Enter'){
+
+        addBtn.click();
+
+      }
+
+    });
+
+    /* SEARCH */
+
+    const searchInput = document.getElementById('searchInput');
+
+    searchInput.addEventListener('keyup', () => {
+
+      const filter = searchInput.value.toLowerCase();
+
+      const items = activityList.getElementsByTagName('li');
+
+      Array.from(items).forEach(item => {
+
+        const text = item.textContent.toLowerCase();
+
+        if(text.includes(filter)){
+
+          item.style.display = '';
+
+        } else {
+
+          item.style.display = 'none';
+
+        }
+
+      });
+
+    });
+
+    /* ACTIVITY CARDS */
+
+    const cardButtons = document.querySelectorAll('.card-btn');
+
+    cardButtons.forEach(button => {
+
+      button.addEventListener('click', () => {
+
+        const activityTitle =
+        button.parentElement.querySelector('h3').textContent;
+
+        createListItem(activityTitle);
+
+      });
+
+    });
 
   </script>
 
 </body>
 </html>
+
