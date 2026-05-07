@@ -12,31 +12,29 @@
   }
 </script>
 </head>
-<body class="bg-white text-black dark:bg-gray-900 dark:text-white">
+<body class="bg-white text-black dark:bg-gray-900 dark:text-white" >
     <header  >
         <div class="flex justify-between items-center px-6 py-3 ">
             <h1 class="text-black dark:text-white">VISIT RW</h1>
             <nav class="hidden md:flex gap-4 ">
                 
-            <a href="#">Home</a>
-            <a href="#">features </a>
+            <a class="dark:text-white" href="#home">Home</a>
+            <a class="dark:text-white" href="#features">features </a>
             <div class="relative">
   <button id="pagesBtn">Pages ▾</button>
 
   <ul id="pagesMenu"
       class="hidden absolute bg-white dark:bg-gray-800 shadow-md mt-2 p-2 rounded">
 
-    <li><a class="block px-2 py-1 dark:text-white" href="#">About</a></li>
-    <li><a class="block px-2 py-1 dark:text-white" href="#">Gallery</a></li>
-    <li><a class="block px-2 py-1 dark:text-white" href="#">Activities</a></li>
-    <li><a class="block px-2 py-1 dark:text-white" href="#">Booking</a></li>
+    <li><a class="block px-2 py-1 dark:text-white" href="About">About</a></li>
+    <li><a class="block px-2 py-1 dark:text-white" href="Gallery">Gallery</a></li>
+    <li><a class="block px-2 py-1 dark:text-white" href="Activities">Activities</a></li>
+    <li><a class="block px-2 py-1 dark:text-white" href="Booking">Booking</a></li>
 
   </ul>
 </div>
-            
-            
-            <a href="#">support</a>
-            <a href="#">contact</a>
+     
+            <a  class=" dark:text-white" href="#contact">contact</a>
             
         </nav>
         <div class="flex items-center gap-4">
@@ -51,6 +49,46 @@
         
     </header>
     <main>
+        <section 
+  id="home"
+  class="h-screen flex flex-col justify-center items-center text-center text-white bg-cover bg-center"
+  style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e');"
+>
+
+  <div class="bg-black/50 w-full h-full flex flex-col justify-center items-center p-6">
+
+    <h1 id="homeTitle" class="text-4xl font-bold">
+      Discover Rwanda with VISIT RW
+    </h1>
+
+    <p id="homeText" class="mt-4 text-lg">
+      Plan your journey, explore destinations, and choose your next adventure.
+    </p>
+
+    <div class="mt-6">
+      <input 
+        id="userInput"
+        type="text"
+        placeholder="Enter your dream destination..."
+        class="border p-2 rounded text-black"
+      >
+
+      <button 
+        id="changeTextBtn"
+        class="bg-blue-600 text-white px-4 py-2 rounded ml-2"
+      >
+        Plan Trip
+      </button>
+    </div>
+
+    <p id="output" class="mt-4 text-green-300 font-semibold"></p>
+
+  </div>
+
+</section>
+
+
+
         
     </main>
     <script>
@@ -78,6 +116,48 @@
                        pagesMenu.classList.add("hidden");
                  }
                    });
+
+                   //for home
+                   const bt = document.getElementById("changeTextBtn");
+const input = document.getElementById("userInput");
+const title = document.getElementById("homeTitle");
+const output = document.getElementById("output");
+
+bt.addEventListener("click", function () {
+  const value = input.value;
+
+  if (value.trim() !== "") {
+    title.textContent = "Your Rwanda Trip Plan";
+    output.textContent = "Destination: " + value;
+  } else {
+    alert("Please enter a destination");
+  }
+});
+                 //features
+                 const buttons = document.querySelectorAll(".addBtn");
+const list = document.getElementById("activityList");
+
+buttons.forEach(function(btn) {
+  btn.addEventListener("click", function() {
+
+    let card = this.parentElement;
+    let activity = card.querySelector("h3").textContent;
+
+    let li = document.createElement("li");
+    li.textContent = activity;
+
+    li.classList.add("cursor-pointer", "p-2", "bg-gray-200", "rounded");
+
+    list.appendChild(li);
+
+    // remove item on click
+    li.addEventListener("click", function () {
+      li.remove();
+    });
+
+  });
+});
+
 
        
     </script>
