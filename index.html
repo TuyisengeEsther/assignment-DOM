@@ -64,6 +64,21 @@
 
            btn.textContent = document.documentElement.classList.contains("dark") ? "☀️" : "🌙";
 });
+       //for dropdown pages
+       
+            const pagesBtn = document.getElementById("pagesBtn");
+              const pagesMenu = document.getElementById("pagesMenu");
+
+                    pagesBtn.addEventListener("click", function()  {
+                        pagesMenu.classList.toggle("hidden");
+                 });
+
+                  document.addEventListener("click",  function (e){
+                  if (!pagesBtn.contains(e.target) && !pagesMenu.contains(e.target)) {
+                       pagesMenu.classList.add("hidden");
+                 }
+                   });
+
        
     </script>
     <footer></footer>
